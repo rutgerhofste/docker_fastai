@@ -1,6 +1,6 @@
 # docker_fastai
 
-Run a docker container with GPU support on Amazon EC2. This repository contains scripts to setup the EC2 instance and to create the docker container. This is not for beginners. Advanced knowledge of AWS and Docker is assumed.
+Run a docker container with GPU support on Amazon EC2. Ships with fastai kernel and repository. This repository contains scripts to setup the EC2 instance and to create the docker container. This is not for beginners. Some knowledge of AWS and Docker is required.
 
 ## Step 1 Setup your EC2 Instance
 
