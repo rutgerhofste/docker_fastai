@@ -17,9 +17,9 @@ start a TMUX server.  `tmux new -s tmuxsession01`
 
 SSH into your instance and run the nvidia-docker container:
 
-`nvidia-docker run --name fastai -it -p 8888:8888 rutgerhofste/docker_conda_jupyter:cuda9.0 bash`
+`nvidia-docker run --name fastai -it -p 8888:8888 rutgerhofste/docker_fastai:ec2v02 bash`
 
-Add `sudo` to this command if your user has insufficient permissions. [Docs](https://docs.docker.com/install/linux/linux-postinstall/)
+Add `sudo` to this command if your user has insufficient permissions. You can change this [here](https://docs.docker.com/install/linux/linux-postinstall/).
 
 
 ## Step 3 Setup the Jupyter Notebook
@@ -27,6 +27,9 @@ Add `sudo` to this command if your user has insufficient permissions. [Docs](htt
 ### Step 3.1  
 Create Credentials
 `openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /.keys/mykey.key -out /.keys/mycert.pem`
+
+Fill out the forms. It does not matter how you fill them out since you will likely trust your own certificate, don't you?
+
 
 ### Step 3.2 
 Launch the Jupyter Notebook
