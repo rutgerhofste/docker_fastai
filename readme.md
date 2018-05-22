@@ -44,10 +44,14 @@ The notebook is now running in a docker container on port 8888. This port is for
 Find the IP of the host machine in the AWS console.
 
 ### Step 4.2
-https://52.57.114.149:8888
+connect to https://52.57.114.149:8888 
+
+This has been tested on Firefox and Chrome on Mac and Windows. Note that both browsers force you to explicitly add a security exception to allow the self-signed certificate to be trusted. 
+
 
 ### Step 4.3  
 Login. If you did not change the jupyter config file, the standard password is Aqueduct2017!. Consider changing it ASAP.
+
 
 
 
