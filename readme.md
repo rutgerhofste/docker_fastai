@@ -53,11 +53,11 @@ Launch the Jupyter Notebook
 The notebook is now running in a docker container on port 8888. This port is forwarded (-p flag in docker command) to the EC2 host machine. You can connect to the host machine on port 8888 over HTTPS. 
 
 ### Step 4.1
-Find the IP of the host machine in the AWS console.
+Copy the IP of the host machine in the AWS console.
 
 ### Step 4.2
 Replace the IP with your IP. Make sure to use https.  
-connect to https://52.57.114.149:8888 
+https://xx.xx.xxx.xxx:8888 
 
 This has been tested on Firefox and Chrome on Mac and Windows. Note that both browsers force you to explicitly add a security exception to allow the self-signed certificate to be trusted. 
 
