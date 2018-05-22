@@ -8,6 +8,10 @@ Launch a p2.xlarge instance with Deep Learning Base AMI (Ubuntu) Version 5.0 (am
 
 Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance. 
 
+## (Optional)
+
+start a TMUX server.  `tmux new -s tmuxsession01`
+
 
 ## Step 2 Setup the Docker Container
 
@@ -18,7 +22,8 @@ SSH into your instance and run the nvidia-docker container:
 ## Step 3 Setup the Jupyter Notebook
 
 ### Step 3.1  
-Create Credential
+Create Credentials
+`openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /.keys/mykey.key -out /.keys/mycert.pem`
 
 ### Step 3.2 
 Launch the Jupyter Notebook
@@ -26,6 +31,4 @@ Launch the Jupyter Notebook
 `jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --certfile=/.keys/mycert.pem --keyfile=/.keys/mykey.key --notebook-dir= /volumes/repos/fastai/ --config=/volumes/repos/docker_fastai/jupyter_notebook_config.py`
 
 
-## TODO:  
-allow TMUX support
 
