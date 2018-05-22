@@ -52,6 +52,9 @@ This has been tested on Firefox and Chrome on Mac and Windows. Note that both br
 ### Step 4.3  
 Login. If you did not change the jupyter config file, the standard password is Aqueduct2017!. Consider changing it ASAP.
 
+## Step 5 Happy coding
+make sure to use the correct kernel when running fast.ai notebooks. 
+
 
 
 
