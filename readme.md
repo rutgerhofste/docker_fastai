@@ -8,6 +8,11 @@ Launch a p2.xlarge instance with Deep Learning Base AMI (Ubuntu) Version 5.0 (am
 
 Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance. 
 
+Make sure to allow SSH and HTTPS traffic in the security group. 
+
+![Step01](../step01.png?raw=true "Create Instance")
+
+
 ## (Optional)
 
 start a TMUX server.  `tmux new -s tmuxsession01`
@@ -44,6 +49,7 @@ The notebook is now running in a docker container on port 8888. This port is for
 Find the IP of the host machine in the AWS console.
 
 ### Step 4.2
+Replace the IP with your IP. Make sure to use https.  
 connect to https://52.57.114.149:8888 
 
 This has been tested on Firefox and Chrome on Mac and Windows. Note that both browsers force you to explicitly add a security exception to allow the self-signed certificate to be trusted. 
@@ -55,7 +61,10 @@ Login. If you did not change the jupyter config file, the standard password is A
 ## Step 5 Happy coding
 make sure to use the correct kernel when running fast.ai notebooks. 
 
+Troubleshooting:
 
+1. cannot connect to EC2 machine.
+    Make sure the security group allows IP and SSH traffic. See Amazon Tutorials. 
 
 
 
