@@ -11,6 +11,10 @@ Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instan
 Make sure to allow SSH and HTTPS traffic in the security group. 
 
 ![Step01](/images/step01.PNG)
+![Step02](/images/step02.PNG)
+![Step03](/images/step03.PNG)
+![Step04](/images/step04.PNG)
+![Step06](/images/step06.PNG)
 
 
 ## (Optional)
