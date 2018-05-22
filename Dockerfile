@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y \
   libxrender1 \
   libfontconfig1 \
   dialog \
-	apt-utils \
-	libffi-dev \
-	libssl-dev  
+  apt-utils \
+  libffi-dev \
+  libssl-dev  
 
 # TMUX 
 # Docker uses POSIX which causes conflicts with TMUX, install en_US locale UTF-8
