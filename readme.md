@@ -4,11 +4,10 @@ Run a docker container with GPU support on Amazon EC2. Ships with fastai kernel 
 
 ## Step 1 Setup your EC2 Instance
 
-Launch a p2.xlarge instance with Deep Learning Base AMI (Ubuntu) Version 5.0 (ami-4580a7ae)
-
-Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance. 
-
-Make sure to allow SSH and HTTPS traffic in the security group. 
+### Step 1.1
+Launch a p2.xlarge instance with Deep Learning Base AMI (Ubuntu) Version 5.0 (ami-4580a7ae)  
+Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance.  
+Make sure to allow SSH and HTTPS traffic in the security group.  
 
 ![Step01](/images/step01.PNG)
 ![Step02](/images/step02.PNG)
@@ -16,15 +15,19 @@ Make sure to allow SSH and HTTPS traffic in the security group.
 ![Step04](/images/step04.PNG)
 ![Step06](/images/step06.PNG)
 
+### Step 1.2
+Connect to your EC2 instance using this [Tutorial](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html).
+Remember to add "ubuntu" as your user. 
+
 
 ## (Optional)
 
-start a TMUX server.  `tmux new -s tmuxsession01`
-
+start a TMUX server in your EC2 machine.  `tmux new -s tmuxsession01`
+Try to create a couple of panes and sessions. Read some docs on TMUX online. 
 
 ## Step 2 Setup the Docker Container
 
-SSH into your instance and run the nvidia-docker container:
+Run the nvidia-docker container:
 
 `nvidia-docker run --name fastai -it -p 8888:8888 rutgerhofste/docker_fastai:ec2v02 bash`
 
