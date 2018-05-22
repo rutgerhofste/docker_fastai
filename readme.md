@@ -25,7 +25,7 @@ Add `sudo` to this command if your user has insufficient permissions. You can ch
 ## Step 3 Setup the Jupyter Notebook
 
 ### Step 3.1  
-Create Credentials
+Create Credentials to enable HTTPS
 `openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /.keys/mykey.key -out /.keys/mycert.pem`
 
 Fill out the forms. It does not matter how you fill them out since you will likely trust your own certificate, don't you?
@@ -34,7 +34,22 @@ Fill out the forms. It does not matter how you fill them out since you will like
 ### Step 3.2 
 Launch the Jupyter Notebook
 
-`jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --certfile=/.keys/mycert.pem --keyfile=/.keys/mykey.key --notebook-dir= /volumes/repos/fastai/ --config=/volumes/repos/docker_fastai/jupyter_notebook_config.py`
+`jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --certfile=/.keys/mycert.pem --keyfile=/.keys/mykey.key --notebook-dir= /volumes/repos/fastai/ --config=/jupyter_notebook_config.py`
+
+## Step 4  Connect to your notebook
+
+The notebook is now running in a docker container on port 8888. This port is forwarded (-p flag in docker command) to the EC2 host machine. You can connect to the host machine on port 8888 over HTTPS. 
+
+### Step 4.1
+Find the IP of the host machine in the AWS console.
+
+### Step 4.2
+https://52.57.114.149:8888
+
+### Step 4.3  
+Login. If you did not change the jupyter config file, the standard password is Aqueduct2017!. Consider changing it ASAP.
+
+
 
 
 
