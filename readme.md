@@ -17,7 +17,7 @@ start a TMUX server.  `tmux new -s tmuxsession01`
 
 SSH into your instance and run the nvidia-docker container:
 
-`nvidia-docker run -it -p 8888:8888 rutgerhofste/docker_conda_jupyter:cuda9.0 bash`
+`nvidia-docker run --name fastai -it -p 8888:8888 rutgerhofste/docker_conda_jupyter:cuda9.0 bash`
 
 ## Step 3 Setup the Jupyter Notebook
 
