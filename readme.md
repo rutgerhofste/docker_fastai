@@ -10,7 +10,7 @@ Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instan
 
 Make sure to allow SSH and HTTPS traffic in the security group. 
 
-![Step01](../images/step01.png?raw=true "Create Instance")
+![Step01](/images/step01.png "Create Instance")
 
 
 ## (Optional)
