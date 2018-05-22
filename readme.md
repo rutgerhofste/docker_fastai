@@ -6,7 +6,7 @@ Run a docker container with GPU support on Amazon EC2. Ships with fastai kernel 
 
 ### Step 1.1
 Launch a p2.xlarge instance with Deep Learning Base AMI (Ubuntu) Version 5.0 (ami-4580a7ae)  
-Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance.  
+Use the setup.sh bash script to setup Docker and Nvidia-Docker on the EC2 instance.  The bash script is located in the root of this repo. Select "as file" (see screenshots below) 
 Make sure to allow SSH and HTTPS traffic in the security group.  
 
 ![Step01](/images/step01.PNG)
