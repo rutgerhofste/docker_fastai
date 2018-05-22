@@ -19,6 +19,9 @@ SSH into your instance and run the nvidia-docker container:
 
 `nvidia-docker run --name fastai -it -p 8888:8888 rutgerhofste/docker_conda_jupyter:cuda9.0 bash`
 
+Add `sudo` to this command if your user has insufficient permissions. [Docs](https://docs.docker.com/install/linux/linux-postinstall/)
+
+
 ## Step 3 Setup the Jupyter Notebook
 
 ### Step 3.1  

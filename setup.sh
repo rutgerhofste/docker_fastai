@@ -34,7 +34,7 @@ apt-get update
 apt-get install -y nvidia-docker2
 pkill -SIGHUP dockerd
 
-
+reboot
 
 
 
